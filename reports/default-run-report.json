@@ -1,0 +1,866 @@
+{
+  "architecture": {
+    "classical_toy_simulation": true,
+    "hardware_claimed": false,
+    "join": "timestamped classical scalar event bus only",
+    "membrane_term": "metaphor only; audio sonification does not entangle sound with qubits",
+    "modules": [
+      {
+        "description": "classical metrics ledger: 1,024 scalar slots; not an OES detector; no quantum channels",
+        "lane": "oes_control"
+      },
+      {
+        "description": "Bell-correlation Monte Carlo model; no quantum state/circuit evolution; classical toy simulation",
+        "lane": "quantum_sandbox"
+      },
+      {
+        "description": "digital stereo loopback; synthetic in-memory calibration; no audio device",
+        "lane": "stereo_binaural"
+      }
+    ],
+    "observer_term": "measurement/readout only; no consciousness interpretation",
+    "quantum_advantage_claimed": false
+  },
+  "event_bus": {
+    "cross_lane_payloads_are_metrics_only": true,
+    "lane_event_counts": {
+      "oes_control": 1024,
+      "quantum_sandbox": 9,
+      "stereo_binaural": 7
+    },
+    "only_scalar_payloads": true,
+    "timestamped": true
+  },
+  "oes_control": {
+    "audio_waveforms_in_oes": false,
+    "capacity_slots": 1024,
+    "input_source": "timestamped quantum/audio summary events on the classical event bus only",
+    "occupied_slots": 1024,
+    "raw_quantum_states_in_oes": false,
+    "slot_events_published": 1024,
+    "slot_semantics": "classical metrics ledger: scalar measurements/reported metrics only; 1,024 slots are a modeling choice, not an OES detector or physical interpretation of 1,024 interactions",
+    "source_lane_counts": {
+      "quantum_sandbox": 576,
+      "stereo_binaural": 448
+    }
+  },
+  "quantum_sandbox": {
+    "limits": {
+      "calibration_shots_max_per_prepared_state_per_pair": 4096,
+      "cross_pair_crosstalk": "not modeled",
+      "global_entanglement": "not modeled",
+      "hardware": "software simulation only; no quantum hardware connection",
+      "max_pairs": 512,
+      "max_qubits": 1024,
+      "max_shots_per_pair_per_setting": 128
+    },
+    "model": {
+      "classical_toy_simulation": true,
+      "observer_definition": "observer means measurement/readout in this simulator; it does not mean consciousness",
+      "pair_count": 512,
+      "quantum_advantage_claimed": false,
+      "qubit_count": 1024,
+      "representation": "compact 4-outcome probability distributions per pair; classical Monte Carlo only; no dense global state vector",
+      "structure": "512 independent Bell-correlation Monte Carlo pair samplers; not one globally entangled 1024-qubit state; no quantum state/circuit evolution",
+      "superposition_definition": "|+> is one balanced single-qubit state; increasing shots improves probability estimates, not the amount of superposition"
+    },
+    "readout_calibration": {
+      "calibration_method": "repeated known-basis pair preparations; each pair matrix estimated from its own calibration-shot set; evaluation shots are generated from the hidden true matrices and corrected with estimates only",
+      "calibration_shots_per_prepared_state_per_pair": 64,
+      "calibration_shots_total": 131072,
+      "corrected_metric_ci_note": "95% corrected metric intervals use an analytic normal approximation for the unprojected linear-deconvolution shot variance, conditional on the pooled estimated matrix. Point estimates are Euclidean-projected onto the probability simplex; intervals do not model projection effects or propagate matrix-estimation uncertainty. Matrix-cell Wilson intervals report calibration uncertainty separately, but do not validate corrected-interval coverage.",
+      "correction_matrix_for_aggregate_metrics": "pooled estimate across pair-specific calibration counts",
+      "correction_uses_estimates_only": true,
+      "cross_pair_correlated_readout_modeled": false,
+      "evaluation_shots_separate_and_held_out": true,
+      "evaluation_uses_hidden_true_matrices": true,
+      "known_prepared_states_per_pair": 4,
+      "matrix_estimates_with_95pct_wilson_intervals": [
+        [
+          {
+            "ci95_wilson": [
+              0.9386866472718419,
+              0.9437782589599087
+            ],
+            "estimate": 0.9412841796875
+          },
+          {
+            "ci95_wilson": [
+              0.021618681235738416,
+              0.0248798184209095
+            ],
+            "estimate": 0.023193359375
+          },
+          {
+            "ci95_wilson": [
+              0.02397837517058327,
+              0.0274023646311919
+            ],
+            "estimate": 0.025634765625
+          },
+          {
+            "ci95_wilson": [
+              0.008872364415730775,
+              0.011017926449973627
+            ],
+            "estimate": 0.0098876953125
+          }
+        ],
+        [
+          {
+            "ci95_wilson": [
+              0.023417555859406924,
+              0.02680365190790052
+            ],
+            "estimate": 0.025054931640625
+          },
+          {
+            "ci95_wilson": [
+              0.9276453459373394,
+              0.9331546196504089
+            ],
+            "estimate": 0.930450439453125
+          },
+          {
+            "ci95_wilson": [
+              0.013374170774178951,
+              0.0159754603727095
+            ],
+            "estimate": 0.014617919921875
+          },
+          {
+            "ci95_wilson": [
+              0.028087771003257423,
+              0.03177586105067635
+            ],
+            "estimate": 0.029876708984375
+          }
+        ],
+        [
+          {
+            "ci95_wilson": [
+              0.024391758157183255,
+              0.027843373669989183
+            ],
+            "estimate": 0.02606201171875
+          },
+          {
+            "ci95_wilson": [
+              0.013403350691024912,
+              0.01600730845767763
+            ],
+            "estimate": 0.0146484375
+          },
+          {
+            "ci95_wilson": [
+              0.9248804509613462,
+              0.9304880224649481
+            ],
+            "estimate": 0.927734375
+          },
+          {
+            "ci95_wilson": [
+              0.029716639258712724,
+              0.03350353289499603
+            ],
+            "estimate": 0.03155517578125
+          }
+        ],
+        [
+          {
+            "ci95_wilson": [
+              0.00884348581369721,
+              0.010985777050193104
+            ],
+            "estimate": 0.009857177734375
+          },
+          {
+            "ci95_wilson": [
+              0.028324604279421045,
+              0.03202725178902545
+            ],
+            "estimate": 0.030120849609375
+          },
+          {
+            "ci95_wilson": [
+              0.028768753338700482,
+              0.03249852275695737
+            ],
+            "estimate": 0.03057861328125
+          },
+          {
+            "ci95_wilson": [
+              0.9266200221665064,
+              0.932166019361377
+            ],
+            "estimate": 0.929443359375
+          }
+        ]
+      ],
+      "matrix_type": "one 4x4 pair-outcome assignment matrix per modeled pair; rows are known prepared outcomes 00,01,10,11; columns are recorded outcomes 00,01,10,11",
+      "pair_matrices_calibrated": 512,
+      "within_pair_crosstalk_included": true
+    },
+    "sweep": [
+      {
+        "bell": {
+          "chsh_corrected": 2.8630330962437354,
+          "chsh_corrected_ci95_conditional_on_calibration": [
+            2.787904953635662,
+            2.9381612388518086
+          ],
+          "chsh_ideal_simulated": 2.82842712474619,
+          "chsh_label": "approximate simulator check only; not a loophole-free Bell test or hardware evidence. Corrected CHSH may exceed 2\u221a2 from finite-sample noise and simplex-projection effects",
+          "chsh_raw": 2.5478515625,
+          "chsh_raw_ci95": [
+            2.48108969030977,
+            2.61461343469023
+          ],
+          "settings": [
+            {
+              "angle_a_rad": 0.0,
+              "angle_b_rad": 0.39269908169872414,
+              "correlation_corrected": 0.7432437612898454,
+              "correlation_corrected_ci95_conditional_on_calibration": [
+                0.7067251984551862,
+                0.7797623241245045
+              ],
+              "correlation_ideal": 0.7071067811865475,
+              "correlation_raw": 0.662109375,
+              "correlation_raw_ci95": [
+                0.6296529272880307,
+                0.6945658227119693
+              ],
+              "setting": "A0B0",
+              "shots": 2048
+            },
+            {
+              "angle_a_rad": 0.0,
+              "angle_b_rad": -0.39269908169872414,
+              "correlation_corrected": 0.7038675050552119,
+              "correlation_corrected_ci95_conditional_on_calibration": [
+                0.6658983258477769,
+                0.7418366842626469
+              ],
+              "correlation_ideal": 0.7071067811865475,
+              "correlation_raw": 0.626953125,
+              "correlation_raw_ci95": [
+                0.5932125609741389,
+                0.6606936890258611
+              ],
+              "setting": "A0B1",
+              "shots": 2048
+            },
+            {
+              "angle_a_rad": 0.7853981633974483,
+              "angle_b_rad": 0.39269908169872414,
+              "correlation_corrected": 0.7102324791860657,
+              "correlation_corrected_ci95_conditional_on_calibration": [
+                0.672505626530735,
+                0.7479593318413964
+              ],
+              "correlation_ideal": 0.7071067811865475,
+              "correlation_raw": 0.6328125,
+              "correlation_raw_ci95": [
+                0.5992777388653497,
+                0.6663472611346503
+              ],
+              "setting": "A1B0",
+              "shots": 2048
+            },
+            {
+              "angle_a_rad": 0.7853981633974483,
+              "angle_b_rad": -0.39269908169872414,
+              "correlation_corrected": -0.7056893507126123,
+              "correlation_corrected_ci95_conditional_on_calibration": [
+                -0.7437111654939548,
+                -0.6676675359312698
+              ],
+              "correlation_ideal": -0.7071067811865475,
+              "correlation_raw": -0.6259765625,
+              "correlation_raw_ci95": [
+                -0.6597511197158019,
+                -0.5922020052841981
+              ],
+              "setting": "A1B1",
+              "shots": 2048
+            }
+          ]
+        },
+        "bell_pair_evaluation_shots_per_setting": 2048,
+        "bell_pair_evaluation_shots_total": 8192,
+        "separable_control": {
+          "chsh_corrected": 1.4052359792862479,
+          "chsh_corrected_ci95_conditional_on_calibration": [
+            1.318566210252031,
+            1.4919057483204647
+          ],
+          "chsh_ideal_simulated": 1.414213562373095,
+          "chsh_label": "approximate simulator check only; not a loophole-free Bell test or hardware evidence. Corrected CHSH may exceed 2\u221a2 from finite-sample noise and simplex-projection effects",
+          "chsh_raw": 1.271484375,
+          "chsh_raw_ci95": [
+            1.1940839304190363,
+            1.3488848195809637
+          ],
+          "settings": [
+            {
+              "angle_a_rad": 0.0,
+              "angle_b_rad": 0.39269908169872414,
+              "correlation_corrected": 0.6981488651857399,
+              "correlation_corrected_ci95_conditional_on_calibration": [
+                0.6606537420976721,
+                0.7356439882738077
+              ],
+              "correlation_ideal": 0.7071067811865475,
+              "correlation_raw": 0.6318359375,
+              "correlation_raw_ci95": [
+                0.5982666550453181,
+                0.6654052199546819
+              ],
+              "setting": "A0B0",
+              "shots": 2048
+            },
+            {
+              "angle_a_rad": 0.0,
+              "angle_b_rad": -0.39269908169872414,
+              "correlation_corrected": 0.7047081066210764,
+              "correlation_corrected_ci95_conditional_on_calibration": [
+                0.6674473409006584,
+                0.7419688723414944
+              ],
+              "correlation_ideal": 0.7071067811865475,
+              "correlation_raw": 0.6376953125,
+              "correlation_raw_ci95": [
+                0.6043344980768259,
+                0.6710561269231741
+              ],
+              "setting": "A0B1",
+              "shots": 2048
+            },
+            {
+              "angle_a_rad": 0.7853981633974483,
+              "angle_b_rad": 0.39269908169872414,
+              "correlation_corrected": 0.00574578211528802,
+              "correlation_corrected_ci95_conditional_on_calibration": [
+                -0.04282194282156151,
+                0.05431350705213755
+              ],
+              "correlation_ideal": 4.163336342344337e-17,
+              "correlation_raw": 0.01171875,
+              "correlation_raw_ci95": [
+                -0.03158777058183702,
+                0.05502527058183702
+              ],
+              "setting": "A1B0",
+              "shots": 2048
+            },
+            {
+              "angle_a_rad": 0.7853981633974483,
+              "angle_b_rad": -0.39269908169872414,
+              "correlation_corrected": 0.0033667746358563566,
+              "correlation_corrected_ci95_conditional_on_calibration": [
+                -0.04519839849717987,
+                0.05193194776889258
+              ],
+              "correlation_ideal": 4.163336342344337e-17,
+              "correlation_raw": 0.009765625,
+              "correlation_raw_ci95": [
+                -0.03354180430405931,
+                0.05307305430405931
+              ],
+              "setting": "A1B1",
+              "shots": 2048
+            }
+          ]
+        },
+        "separable_control_evaluation_shots_total": 8192,
+        "shots_per_pair_per_setting": 4,
+        "superposition": {
+          "h_then_z_control": {
+            "description": "Apply H then measure Z. Ideal |+> yields P(1)=0; incoherent 50/50 mixture stays ~50/50.",
+            "ideal_plus_one_count": 0,
+            "ideal_plus_probability_one_ci95_wilson": [
+              0.9981277993949387,
+              1.0
+            ],
+            "ideal_plus_probability_one_estimate": 0.0,
+            "ideal_plus_probability_one_target": 0.0,
+            "mixture_one_count": 1011,
+            "mixture_probability_one_ci95_wilson": [
+              0.4847030456506975,
+              0.5279684986775586
+            ],
+            "mixture_probability_one_estimate": 0.49365234375,
+            "mixture_probability_one_target": 0.5
+          },
+          "ideal_probability_zero": 0.5,
+          "probability_zero_ci95_wilson": [
+            0.49055614695527366,
+            0.533812207522142
+          ],
+          "probability_zero_estimate": 0.51220703125,
+          "shots": 2048,
+          "state": "|+> = (|0> + |1>)/sqrt(2)",
+          "z_basis_note": "Z-only outcomes are 50/50 for both coherent |+> and an incoherent 50/50 mixture; this arm is a balanced-outcome sampler",
+          "zero_count": 1049
+        }
+      },
+      {
+        "bell": {
+          "chsh_corrected": 2.814800891158561,
+          "chsh_corrected_ci95_conditional_on_calibration": [
+            2.7610951169473723,
+            2.86850666536975
+          ],
+          "chsh_ideal_simulated": 2.82842712474619,
+          "chsh_label": "approximate simulator check only; not a loophole-free Bell test or hardware evidence. Corrected CHSH may exceed 2\u221a2 from finite-sample noise and simplex-projection effects",
+          "chsh_raw": 2.505859375,
+          "chsh_raw_ci95": [
+            2.4581220133963826,
+            2.5535967366036174
+          ],
+          "settings": [
+            {
+              "angle_a_rad": 0.0,
+              "angle_b_rad": 0.39269908169872414,
+              "correlation_corrected": 0.7049871919841914,
+              "correlation_corrected_ci95_conditional_on_calibration": [
+                0.6781865202712061,
+                0.7317878636971766
+              ],
+              "correlation_ideal": 0.7071067811865475,
+              "correlation_raw": 0.62841796875,
+              "correlation_raw_ci95": [
+                0.6045959582218887,
+                0.6522399792781113
+              ],
+              "setting": "A0B0",
+              "shots": 4096
+            },
+            {
+              "angle_a_rad": 0.0,
+              "angle_b_rad": -0.39269908169872414,
+              "correlation_corrected": 0.6895660976348847,
+              "correlation_corrected_ci95_conditional_on_calibration": [
+                0.6623936884114916,
+                0.7167385068582779
+              ],
+              "correlation_ideal": 0.7071067811865475,
+              "correlation_raw": 0.61474609375,
+              "correlation_raw_ci95": [
+                0.590591832248621,
+                0.638900355251379
+              ],
+              "setting": "A0B1",
+              "shots": 4096
+            },
+            {
+              "angle_a_rad": 0.7853981633974483,
+              "angle_b_rad": 0.39269908169872414,
+              "correlation_corrected": 0.6996058880719288,
+              "correlation_corrected_ci95_conditional_on_calibration": [
+                0.6726723964285508,
+                0.7265393797153068
+              ],
+              "correlation_ideal": 0.7071067811865475,
+              "correlation_raw": 0.62353515625,
+              "correlation_raw_ci95": [
+                0.5995931147872213,
+                0.6474771977127787
+              ],
+              "setting": "A1B0",
+              "shots": 4096
+            },
+            {
+              "angle_a_rad": 0.7853981633974483,
+              "angle_b_rad": -0.39269908169872414,
+              "correlation_corrected": -0.720641713467556,
+              "correlation_corrected_ci95_conditional_on_calibration": [
+                -0.7471423056165729,
+                -0.6941411213185391
+              ],
+              "correlation_ideal": -0.7071067811865475,
+              "correlation_raw": -0.63916015625,
+              "correlation_raw_ci95": [
+                -0.6627126043009071,
+                -0.6156077081990929
+              ],
+              "setting": "A1B1",
+              "shots": 4096
+            }
+          ]
+        },
+        "bell_pair_evaluation_shots_per_setting": 4096,
+        "bell_pair_evaluation_shots_total": 16384,
+        "separable_control": {
+          "chsh_corrected": 1.4229157618176886,
+          "chsh_corrected_ci95_conditional_on_calibration": [
+            1.3617123407721758,
+            1.4841191828632014
+          ],
+          "chsh_ideal_simulated": 1.414213562373095,
+          "chsh_label": "approximate simulator check only; not a loophole-free Bell test or hardware evidence. Corrected CHSH may exceed 2\u221a2 from finite-sample noise and simplex-projection effects",
+          "chsh_raw": 1.28759765625,
+          "chsh_raw_ci95": [
+            1.2329373661822725,
+            1.3422579463177275
+          ],
+          "settings": [
+            {
+              "angle_a_rad": 0.0,
+              "angle_b_rad": 0.39269908169872414,
+              "correlation_corrected": 0.697227914479081,
+              "correlation_corrected_ci95_conditional_on_calibration": [
+                0.6707044996123019,
+                0.72375132934586
+              ],
+              "correlation_ideal": 0.7071067811865475,
+              "correlation_raw": 0.63134765625,
+              "correlation_raw_ci95": [
+                0.607598407388296,
+                0.655096905111704
+              ],
+              "setting": "A0B0",
+              "shots": 4096
+            },
+            {
+              "angle_a_rad": 0.0,
+              "angle_b_rad": -0.39269908169872414,
+              "correlation_corrected": 0.7123675993654804,
+              "correlation_corrected_ci95_conditional_on_calibration": [
+                0.6862167675933106,
+                0.7385184311376503
+              ],
+              "correlation_ideal": 0.7071067811865475,
+              "correlation_raw": 0.64453125,
+              "correlation_raw_ci95": [
+                0.6211164800173884,
+                0.6679460199826116
+              ],
+              "setting": "A0B1",
+              "shots": 4096
+            },
+            {
+              "angle_a_rad": 0.7853981633974483,
+              "angle_b_rad": 0.39269908169872414,
+              "correlation_corrected": 0.010144136953970304,
+              "correlation_corrected_ci95_conditional_on_calibration": [
+                -0.024197593882961096,
+                0.044485867790901704
+              ],
+              "correlation_ideal": 4.163336342344337e-17,
+              "correlation_raw": 0.015625,
+              "correlation_raw_ci95": [
+                -0.014995698695614377,
+                0.04624569869561437
+              ],
+              "setting": "A1B0",
+              "shots": 4096
+            },
+            {
+              "angle_a_rad": 0.7853981633974483,
+              "angle_b_rad": -0.39269908169872414,
+              "correlation_corrected": -0.0031761110191568243,
+              "correlation_corrected_ci95_conditional_on_calibration": [
+                -0.037514817055151625,
+                0.031162595016837977
+              ],
+              "correlation_ideal": 4.163336342344337e-17,
+              "correlation_raw": 0.00390625,
+              "correlation_raw_ci95": [
+                -0.026717953611632907,
+                0.03453045361163291
+              ],
+              "setting": "A1B1",
+              "shots": 4096
+            }
+          ]
+        },
+        "separable_control_evaluation_shots_total": 16384,
+        "shots_per_pair_per_setting": 8,
+        "superposition": {
+          "h_then_z_control": {
+            "description": "Apply H then measure Z. Ideal |+> yields P(1)=0; incoherent 50/50 mixture stays ~50/50.",
+            "ideal_plus_one_count": 0,
+            "ideal_plus_probability_one_ci95_wilson": [
+              0.9990630225926348,
+              0.9999999999999999
+            ],
+            "ideal_plus_probability_one_estimate": 0.0,
+            "ideal_plus_probability_one_target": 0.0,
+            "mixture_one_count": 2093,
+            "mixture_probability_one_ci95_wilson": [
+              0.47372261407235033,
+              0.5043253175601358
+            ],
+            "mixture_probability_one_estimate": 0.510986328125,
+            "mixture_probability_one_target": 0.5
+          },
+          "ideal_probability_zero": 0.5,
+          "probability_zero_ci95_wilson": [
+            0.4793297777545372,
+            0.509938099932456
+          ],
+          "probability_zero_estimate": 0.49462890625,
+          "shots": 4096,
+          "state": "|+> = (|0> + |1>)/sqrt(2)",
+          "z_basis_note": "Z-only outcomes are 50/50 for both coherent |+> and an incoherent 50/50 mixture; this arm is a balanced-outcome sampler",
+          "zero_count": 2026
+        }
+      },
+      {
+        "bell": {
+          "chsh_corrected": 2.83772842566937,
+          "chsh_corrected_ci95_conditional_on_calibration": [
+            2.799946701593996,
+            2.8755101497447435
+          ],
+          "chsh_ideal_simulated": 2.82842712474619,
+          "chsh_label": "approximate simulator check only; not a loophole-free Bell test or hardware evidence. Corrected CHSH may exceed 2\u221a2 from finite-sample noise and simplex-projection effects",
+          "chsh_raw": 2.52587890625,
+          "chsh_raw_ci95": [
+            2.4922992560078625,
+            2.5594585564921375
+          ],
+          "settings": [
+            {
+              "angle_a_rad": 0.0,
+              "angle_b_rad": 0.39269908169872414,
+              "correlation_corrected": 0.7055837283567984,
+              "correlation_corrected_ci95_conditional_on_calibration": [
+                0.6866342443174587,
+                0.7245332123961381
+              ],
+              "correlation_ideal": 0.7071067811865475,
+              "correlation_raw": 0.628662109375,
+              "correlation_raw_ci95": [
+                0.6118216765792106,
+                0.6455025421707894
+              ],
+              "setting": "A0B0",
+              "shots": 8192
+            },
+            {
+              "angle_a_rad": 0.0,
+              "angle_b_rad": -0.39269908169872414,
+              "correlation_corrected": 0.6959268753811211,
+              "correlation_corrected_ci95_conditional_on_calibration": [
+                0.6768199559592429,
+                0.7150337948029992
+              ],
+              "correlation_ideal": 0.7071067811865475,
+              "correlation_raw": 0.620361328125,
+              "correlation_raw_ci95": [
+                0.6033771601364314,
+                0.6373454961135686
+              ],
+              "setting": "A0B1",
+              "shots": 8192
+            },
+            {
+              "angle_a_rad": 0.7853981633974483,
+              "angle_b_rad": 0.39269908169872414,
+              "correlation_corrected": 0.725721680780089,
+              "correlation_corrected_ci95_conditional_on_calibration": [
+                0.7071395875034863,
+                0.7443037740566918
+              ],
+              "correlation_ideal": 0.7071067811865475,
+              "correlation_raw": 0.646728515625,
+              "correlation_raw_ci95": [
+                0.6302120007129204,
+                0.6632450305370796
+              ],
+              "setting": "A1B0",
+              "shots": 8192
+            },
+            {
+              "angle_a_rad": 0.7853981633974483,
+              "angle_b_rad": -0.39269908169872414,
+              "correlation_corrected": -0.7104961411513613,
+              "correlation_corrected_ci95_conditional_on_calibration": [
+                -0.7294172185101154,
+                -0.6915750637926071
+              ],
+              "correlation_ideal": -0.7071067811865475,
+              "correlation_raw": -0.630126953125,
+              "correlation_raw_ci95": [
+                -0.6469416938761958,
+                -0.6133122123738042
+              ],
+              "setting": "A1B1",
+              "shots": 8192
+            }
+          ]
+        },
+        "bell_pair_evaluation_shots_per_setting": 8192,
+        "bell_pair_evaluation_shots_total": 32768,
+        "separable_control": {
+          "chsh_corrected": 1.4050630262298873,
+          "chsh_corrected_ci95_conditional_on_calibration": [
+            1.3616716694925155,
+            1.4484543829672591
+          ],
+          "chsh_ideal_simulated": 1.414213562373095,
+          "chsh_label": "approximate simulator check only; not a loophole-free Bell test or hardware evidence. Corrected CHSH may exceed 2\u221a2 from finite-sample noise and simplex-projection effects",
+          "chsh_raw": 1.274169921875,
+          "chsh_raw_ci95": [
+            1.2354164002873398,
+            1.3129234434626602
+          ],
+          "settings": [
+            {
+              "angle_a_rad": 0.0,
+              "angle_b_rad": 0.39269908169872414,
+              "correlation_corrected": 0.6945041633177512,
+              "correlation_corrected_ci95_conditional_on_calibration": [
+                0.6756730986434647,
+                0.7133352279920377
+              ],
+              "correlation_ideal": 0.7071067811865475,
+              "correlation_raw": 0.62744140625,
+              "correlation_raw_ci95": [
+                0.6105796389049148,
+                0.6443031735950852
+              ],
+              "setting": "A0B0",
+              "shots": 8192
+            },
+            {
+              "angle_a_rad": 0.0,
+              "angle_b_rad": -0.39269908169872414,
+              "correlation_corrected": 0.6977222780673047,
+              "correlation_corrected_ci95_conditional_on_calibration": [
+                0.6790456323552297,
+                0.7163989237793796
+              ],
+              "correlation_ideal": 0.7071067811865475,
+              "correlation_raw": 0.63525390625,
+              "correlation_raw_ci95": [
+                0.6185298722585824,
+                0.6519779402414176
+              ],
+              "setting": "A0B1",
+              "shots": 8192
+            },
+            {
+              "angle_a_rad": 0.7853981633974483,
+              "angle_b_rad": 0.39269908169872414,
+              "correlation_corrected": 0.0007515130014135035,
+              "correlation_corrected_ci95_conditional_on_calibration": [
+                -0.02353162153539506,
+                0.025034647538222068
+              ],
+              "correlation_ideal": 4.163336342344337e-17,
+              "correlation_raw": 0.00732421875,
+              "correlation_raw_ci95": [
+                -0.01432994767209099,
+                0.02897838517209099
+              ],
+              "setting": "A1B0",
+              "shots": 8192
+            },
+            {
+              "angle_a_rad": 0.7853981633974483,
+              "angle_b_rad": -0.39269908169872414,
+              "correlation_corrected": -0.012085071843417894,
+              "correlation_corrected_ci95_conditional_on_calibration": [
+                -0.03636908149494778,
+                0.012198937808111994
+              ],
+              "correlation_ideal": 4.163336342344337e-17,
+              "correlation_raw": -0.004150390625,
+              "correlation_raw_ci95": [
+                -0.025804951370112187,
+                0.017504170120112187
+              ],
+              "setting": "A1B1",
+              "shots": 8192
+            }
+          ]
+        },
+        "separable_control_evaluation_shots_total": 32768,
+        "shots_per_pair_per_setting": 16,
+        "superposition": {
+          "h_then_z_control": {
+            "description": "Apply H then measure Z. Ideal |+> yields P(1)=0; incoherent 50/50 mixture stays ~50/50.",
+            "ideal_plus_one_count": 0,
+            "ideal_plus_probability_one_ci95_wilson": [
+              0.9995312917117791,
+              1.0
+            ],
+            "ideal_plus_probability_one_estimate": 0.0,
+            "ideal_plus_probability_one_target": 0.0,
+            "mixture_one_count": 4115,
+            "mixture_probability_one_ci95_wilson": [
+              0.48685703167055894,
+              0.5085064706383952
+            ],
+            "mixture_probability_one_estimate": 0.5023193359375,
+            "mixture_probability_one_target": 0.5
+          },
+          "ideal_probability_zero": 0.5,
+          "probability_zero_ci95_wilson": [
+            0.500769318876171,
+            0.5224131695790581
+          ],
+          "probability_zero_estimate": 0.5115966796875,
+          "shots": 8192,
+          "state": "|+> = (|0> + |1>)/sqrt(2)",
+          "z_basis_note": "Z-only outcomes are 50/50 for both coherent |+> and an incoherent 50/50 mixture; this arm is a balanced-outcome sampler",
+          "zero_count": 4191
+        }
+      }
+    ]
+  },
+  "resource_use": {
+    "elapsed_seconds": 0.8040224029682577,
+    "event_count": 1040,
+    "hardware_results": false,
+    "python_tracemalloc_peak_bytes": 731344,
+    "simulation_only": true
+  },
+  "stereo_binaural": {
+    "limitations": [
+      "digital stereo loopback only; not analog hardware calibration",
+      "physical calibration requires a specified audio interface and measured physical loopback",
+      "clipping flags are measured against the configured digital ceiling",
+      "crosstalk for a direction is unavailable (null) when that direction's reference channel level is zero"
+    ],
+    "playback": "disabled; samples remain in memory",
+    "recovery": {
+      "clipped_fraction": 0.0,
+      "clipped_sample_count_across_channels": 0,
+      "crosstalk_abs_error": 6.302261845700374e-05,
+      "delay_error_microseconds": -0.1336371774850557,
+      "delay_error_samples": -0.006414584519282673,
+      "estimated_crosstalk": 0.034936977381543,
+      "estimated_crosstalk_left_from_right": 0.03492056321563398,
+      "estimated_crosstalk_right_from_left": 0.034953391547452015,
+      "estimated_left_level": 0.6200361607898859,
+      "estimated_right_delay_samples": 2.9935854154807173,
+      "estimated_right_level": 0.4800062832944776,
+      "left_level_error": 3.6160789885886224e-05,
+      "left_phase_error_deg": 0.0018782891652644842,
+      "left_phase_error_rad": 3.278233023840116e-05,
+      "peak_before_clipping": 0.5929231304187075,
+      "right_level_error": 6.283294477604784e-06,
+      "right_phase_error_deg": -0.014067495339331071,
+      "right_phase_error_rad": -0.00024552411118028417
+    },
+    "scope": "digital stereo loopback (synthetic in-memory); no audio interface, DAC, ADC, or physical measurement used",
+    "settings": {
+      "clip_threshold": 0.95,
+      "crosstalk": 0.035,
+      "frames": 4096,
+      "left_level": 0.62,
+      "left_phase_rad": 0.08,
+      "noise_std": 0.001,
+      "right_delay_samples": 3,
+      "right_level": 0.48,
+      "right_phase_rad": -0.22,
+      "sample_rate_hz": 48000
+    }
+  },
+  "title": "Classical metrics ledger / Bell-correlation Monte Carlo / digital stereo loopback \u2014 local prototype"
+}

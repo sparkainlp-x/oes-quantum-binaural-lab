@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below. All outputs are SYNTHETIC classical toy simulations — Bell-correlation Monte Carlo, a classical metrics ledger, and digital stereo loopback; not quantum hardware, not QEC, and not consciousness."
+title: "oes-quantum-binaural-lab: classical toy simulation of Bell-correlation Monte Carlo, scalar metrics ledger, and digital stereo loopback"
+type: software
+authors:
+  - family-names: "Brisson"
+    given-names: "Jean-François"
+    affiliation: "Spark AI NLP"
+    orcid: "https://orcid.org/0009-0000-9778-5374"
+repository-code: "https://github.com/sparkainlp-x/oes-quantum-binaural-lab"
+url: "https://github.com/sparkainlp-x/oes-quantum-binaural-lab"
+license: AGPL-3.0-only
+version: "0.1.0"
+abstract: >-
+  Offline, dependency-free Python prototype with three deliberately separate
+  classical software lanes: a classical metrics ledger (1,024 scalar slots, not
+  an OES detector), a Bell-correlation Monte Carlo model (stipulated cosine
+  correlation with synthetic readout error; no quantum state or circuit
+  evolution), and digital stereo loopback (in-memory multitone calibration; no
+  audio hardware). SYNTHETIC evidence only. Membrane is a metaphor; observer
+  means readout, not consciousness. No quantum advantage, QEC, or hardware
+  claim.
+keywords:
+  - classical-simulation
+  - synthetic
+  - monte-carlo
+  - bell-test-simulation
+  - audio-calibration
+  - research-software
+  - reproducibility
+references:
+  - type: software
+    title: "OES-Resilience: benchmarking telemetry intelligence under real-world stress"
+    authors:
+      - family-names: "Brisson"
+        given-names: "Jean-François"
+        orcid: "https://orcid.org/0009-0000-9778-5374"
+    repository-code: "https://github.com/sparkainlp-x/oes-resilience"
+    doi: "10.5281/zenodo.23071166"

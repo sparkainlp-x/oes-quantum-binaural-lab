@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OES / Quantum / Binaural Lab</title>
+<style>
+:root{color-scheme:dark;--bg:#0c1220;--card:#141e30;--line:#2b3b55;--ink:#edf3ff;--muted:#a9bad2;--cyan:#77ddda;--gold:#f0c97d;--blue:#93b9ff;--green:#9ee3b4;--red:#ffb0a8}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 10% 0,#1a2a42,var(--bg) 42%);color:var(--ink);font:15px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}main{max-width:1180px;margin:auto;padding:28px 20px 60px}h1{font-size:clamp(1.8rem,4vw,2.8rem);margin:0 0 6px}h2{font-size:1.2rem;margin:0 0 12px}h3{font-size:1rem;margin:0 0 7px;color:var(--cyan)}p{color:var(--muted);margin:8px 0}.lead{max-width:900px}.card{background:linear-gradient(145deg,rgba(24,36,56,.97),rgba(17,26,41,.97));border:1px solid var(--line);border-radius:16px;padding:19px;margin:16px 0;box-shadow:0 12px 30px #02071155}.diagram{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:10px;align-items:stretch}.lane{border:1px solid var(--line);border-radius:12px;padding:14px;background:#101a29}.lane strong{display:block;margin-bottom:5px}.lane.control{border-color:#7e6d3e}.lane.quantum{border-color:#416e86}.lane.audio{border-color:#4a7658}.bus{align-self:center;text-align:center;color:var(--gold);font-size:1.4rem}.note{border-left:3px solid var(--gold);padding:9px 12px;background:#221f19;border-radius:4px;color:#f4e8c9}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}.field{display:flex;flex-direction:column;gap:4px;color:var(--muted);font-size:.9rem}.field input{width:100%;background:#0b1421;border:1px solid #32445f;border-radius:8px;color:var(--ink);padding:9px;font:inherit}.section-label{margin:18px 0 8px;color:var(--gold);font-weight:650}.button{border:0;border-radius:10px;padding:12px 18px;background:linear-gradient(100deg,#66d9d1,#91b8ff);font-weight:750;color:#0c1726;font-size:1rem;cursor:pointer}.button:disabled{opacity:.5;cursor:wait}.status{margin-left:12px;color:var(--muted)}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#09111d;border:1px solid var(--line);border-radius:10px;padding:14px;max-height:560px;overflow:auto;color:#cddbf0;font-size:.83rem}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}.metric{padding:14px;background:#0d1827;border:1px solid var(--line);border-radius:12px}.metric b{display:block;font-size:1.25rem;color:var(--green)}.tiny{font-size:.82rem}.warn{color:var(--gold)}@media(max-width:760px){.diagram{grid-template-columns:1fr}.bus{transform:rotate(90deg);height:18px}.card{padding:15px}}
+</style>
+</head>
+<body><main>
+<h1>OES / Quantum / Binaural Lab</h1>
+<p class="lead">Classical toy simulation: classical metrics ledger, Bell-correlation Monte Carlo, and digital stereo loopback. “Membrane” is a metaphor; observer means readout, not consciousness. No quantum hardware or advantage.</p>
+<section class="card" aria-label="Architecture separation diagram">
+<h2>Three isolated lanes; one classical event bus</h2>
+<div class="diagram">
+<div class="lane control"><strong>Classical metrics ledger</strong><span>1,024 scalar slots<br>Not an OES detector</span></div><div class="bus" aria-hidden="true">⇄<br><small>timestamped<br>classical events</small></div>
+<div class="lane quantum"><strong>Bell-correlation Monte Carlo</strong><span>Up to 512 independent pairs<br>No state/circuit evolution</span></div><div class="bus" aria-hidden="true">⇄<br><small>timestamped<br>classical events</small></div>
+<div class="lane audio"><strong>Digital stereo loopback</strong><span>In-memory multitone<br>No device access or playback</span></div>
+</div>
+<p class="note tiny">The 1,024 ledger slots are a modeling capacity choice, not an OES detector or physical meaning of “1,024 interactions.” Audio does not entangle with qubits. CLASSICAL SIMULATION / SYNTHETIC only.</p>
+</section>
+<section class="card"><h2>Experiment controls</h2>
+<div class="section-label">Quantum lane</div><div class="grid">
+<label class="field">Independent Bell pairs (max 512)<input id="pairs" type="number" min="1" max="512" value="512"></label>
+<label class="field">Calibration shots per prepared pair outcome<input id="cal" type="number" min="8" max="4096" value="64"></label>
+<label class="field">Evaluation shots per pair per setting; comma-separated<input id="sweep" value="4,8,16"></label>
+<label class="field">Random seed<input id="seed" type="number" value="1731"></label>
+</div>
+<div class="section-label">Synthetic stereo lane</div><div class="grid">
+<label class="field">Left level<input id="leftLevel" type="number" min="0" max="4" step="0.01" value="0.62"></label>
+<label class="field">Right level<input id="rightLevel" type="number" min="0" max="4" step="0.01" value="0.48"></label>
+<label class="field">Left phase (radians)<input id="leftPhase" type="number" min="-6.28" max="6.28" step="0.01" value="0.08"></label>
+<label class="field">Right phase (radians)<input id="rightPhase" type="number" min="-6.28" max="6.28" step="0.01" value="-0.22"></label>
+<label class="field">Right delay (samples)<input id="delay" type="number" min="-64" max="64" value="3"></label>
+<label class="field">Within-stereo cross-talk (0–0.5)<input id="cross" type="number" min="0" max="0.5" step="0.005" value="0.035"></label>
+<label class="field">Noise standard deviation<input id="noise" type="number" min="0" max="0.1" step="0.001" value="0.001"></label>
+<label class="field">Digital clipping ceiling (0.05–1)<input id="clip" type="number" min="0.05" max="1" step="0.01" value="0.95"></label>
+</div><p class="tiny">Playback is absent and disabled; generated signals stay in memory. Actual analog calibration needs a specified interface and measured physical loopback.</p>
+<button class="button" id="run">Run synthetic simulation</button><span class="status" id="status" role="status">Ready — nothing runs until you click.</span></section>
+<section class="card" id="highlights" hidden><h2>Run highlights</h2><div class="cards" id="metrics"></div></section>
+<section class="card" id="reportWrap" hidden><h2>Full machine-readable report</h2><p class="tiny">Includes per-setting correlations, shot counts, calibration-matrix estimates with Wilson intervals, and evaluation confidence intervals.</p><pre id="report"></pre></section>
+</main><script>
+const $=id=>document.getElementById(id);const val=id=>Number($(id).value);
+function fmt(x,n=4){return x==null?"n/a":Number(x).toFixed(n)}
+$('run').addEventListener('click',async()=>{const b=$('run');b.disabled=true;$('status').textContent='Running bounded simulation…';$('highlights').hidden=true;$('reportWrap').hidden=true;
+try{const payload={pair_count:val('pairs'),calibration_shots_per_state:val('cal'),sweep_shots_per_pair:$('sweep').value.split(',').map(x=>Number(x.trim())),seed:val('seed'),audio:{left_level:val('leftLevel'),right_level:val('rightLevel'),left_phase_rad:val('leftPhase'),right_phase_rad:val('rightPhase'),right_delay_samples:val('delay'),crosstalk:val('cross'),noise_std:val('noise'),clip_threshold:val('clip')}};
+const r=await fetch('/api/run',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});const data=await r.json();if(!r.ok)throw new Error(data.error||'Request failed');const q=data.quantum_sandbox.sweep.at(-1),a=data.stereo_binaural.recovery;
+const entries=[['Bell-pair CHSH (corrected; simulated check)',fmt(q.bell.chsh_corrected,3)],['Separable control CHSH (corrected)',fmt(q.separable_control.chsh_corrected,3)],['Calibration / held-out evaluation shots',`${data.quantum_sandbox.readout_calibration.calibration_shots_total.toLocaleString()} / ${q.bell_pair_evaluation_shots_total.toLocaleString()}`],['Pair-local readout matrices',data.quantum_sandbox.readout_calibration.pair_matrices_calibrated.toLocaleString()],['Stereo level errors L / R',`${fmt(a.left_level_error)} / ${fmt(a.right_level_error)}`],['Stereo phase errors L / R (degrees)',`${fmt(a.left_phase_error_deg,2)} / ${fmt(a.right_phase_error_deg,2)}`],['Stereo delay error (samples)',fmt(a.delay_error_samples,3)],['Stereo clipped samples',a.clipped_sample_count_across_channels.toLocaleString()],['Run time / traced peak',`${fmt(data.resource_use.elapsed_seconds,2)} s / ${(data.resource_use.python_tracemalloc_peak_bytes/1048576).toFixed(2)} MiB`],['OES metric slots filled',`${data.oes_control.occupied_slots} / ${data.oes_control.capacity_slots}`]];
+$('metrics').innerHTML=entries.map(([k,v])=>`<div class="metric"><span class="tiny">${k}</span><b>${v}</b></div>`).join('');$('highlights').hidden=false;$('report').textContent=JSON.stringify(data,null,2);$('reportWrap').hidden=false;$('status').textContent='Complete — simulation only; no hardware was accessed.';
+}catch(e){$('status').textContent='Error: '+e.message;}finally{b.disabled=false;}});
+</script></body></html>

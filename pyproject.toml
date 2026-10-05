@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oes-quantum-binaural-lab"
+version = "0.1.0"
+description = "Classical toy simulation: Bell-correlation Monte Carlo, scalar metrics ledger, and digital stereo loopback"
+requires-python = ">=3.10"
+license = { text = "AGPL-3.0-only" }
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+oes_quantum_binaural_lab = ["web/*.html"]
