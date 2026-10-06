@@ -2,9 +2,13 @@
 
 All notable changes to this project. Everything here is a SYNTHETIC classical toy simulation.
 
+## Unreleased
+
+- Added the Zenodo concept DOI [10.5281/zenodo.23175494](https://doi.org/10.5281/zenodo.23175494) (v0.1.0 version DOI [10.5281/zenodo.23175495](https://doi.org/10.5281/zenodo.23175495)) to the README and `CITATION.cff`. The `v0.1.0` tag was not moved.
+
 ## 0.1.0 (2026-10-05)
 
-First tagged release (`v0.1.0`). The Zenodo DOI is added to the README and `CITATION.cff` after Zenodo archives the release; the tag is not moved.
+First tagged release (`v0.1.0`). Archived on Zenodo as 10.5281/zenodo.23175495; the tag is not moved.
 
 ### Added
 

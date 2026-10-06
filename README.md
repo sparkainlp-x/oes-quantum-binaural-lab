@@ -4,7 +4,7 @@
 [![License: AGPL-3.0-only](https://img.shields.io/badge/License-AGPL--3.0--only-blue.svg)](LICENSE)
 [![CLASSICAL SIMULATION](https://img.shields.io/badge/quantum-CLASSICAL%20SIMULATION-orange.svg)](#scope-and-limitations)
 [![Evidence: SYNTHETIC](https://img.shields.io/badge/evidence-SYNTHETIC-blue.svg)](#scope-and-limitations)
-[![DOI: pending](https://img.shields.io/badge/DOI-pending-lightgrey.svg)](#cite)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23175494.svg)](https://doi.org/10.5281/zenodo.23175494)
 
 Local, dependency-free Python prototype with **three deliberately separate classical software lanes**. The lanes share only timestamped, scalar classical events. “Membrane” is a metaphor; the audio signal is not entangled with qubits. This is a **classical toy simulation** — not quantum hardware, not QEC, and not a consciousness model.
 
@@ -101,7 +101,7 @@ This is **digital stereo loopback**, not an analog measurement. It does not open
 
 ## Cite
 
-See [`CITATION.cff`](CITATION.cff). Version 0.1.0 was released on 2026-10-05 (tag [`v0.1.0`](https://github.com/sparkainlp-x/oes-quantum-binaural-lab/releases/tag/v0.1.0)). The Zenodo DOI will be added here once Zenodo archives the release.
+See [`CITATION.cff`](CITATION.cff). Version 0.1.0 was released on 2026-10-05 (tag [`v0.1.0`](https://github.com/sparkainlp-x/oes-quantum-binaural-lab/releases/tag/v0.1.0)). Concept DOI (all versions): [10.5281/zenodo.23175494](https://doi.org/10.5281/zenodo.23175494); version DOI for v0.1.0: [10.5281/zenodo.23175495](https://doi.org/10.5281/zenodo.23175495).
 
 ## License
 
