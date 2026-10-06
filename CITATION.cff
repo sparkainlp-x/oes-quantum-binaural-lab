@@ -11,6 +11,7 @@ repository-code: "https://github.com/sparkainlp-x/oes-quantum-binaural-lab"
 url: "https://github.com/sparkainlp-x/oes-quantum-binaural-lab"
 license: AGPL-3.0-only
 version: "0.1.0"
+date-released: "2026-10-05"
 abstract: >-
   Offline, dependency-free Python prototype with three deliberately separate
   classical software lanes: a classical metrics ledger (1,024 scalar slots, not

@@ -101,7 +101,7 @@ This is **digital stereo loopback**, not an analog measurement. It does not open
 
 ## Cite
 
-See [`CITATION.cff`](CITATION.cff). DOI pending Zenodo (do not mint a GitHub release until the webhook is enabled).
+See [`CITATION.cff`](CITATION.cff). Version 0.1.0 was released on 2026-10-05 (tag [`v0.1.0`](https://github.com/sparkainlp-x/oes-quantum-binaural-lab/releases/tag/v0.1.0)). The Zenodo DOI will be added here once Zenodo archives the release.
 
 ## License
 
