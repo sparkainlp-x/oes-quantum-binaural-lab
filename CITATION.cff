@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below. All outputs are SYNTHETIC classical toy simulations — Bell-correlation Monte Carlo, a classical metrics ledger, and digital stereo loopback; not quantum hardware, not QEC, and not consciousness."
+message: "If you use this software, please cite it as below. All outputs are SYNTHETIC classical toy simulations — Bell-correlation Monte Carlo, a classical metrics ledger, and digital stereo loopback. No quantum hardware is used."
 title: "oes-quantum-binaural-lab: classical toy simulation of Bell-correlation Monte Carlo, scalar metrics ledger, and digital stereo loopback"
 type: software
 authors:
@@ -10,8 +10,8 @@ authors:
 repository-code: "https://github.com/sparkainlp-x/oes-quantum-binaural-lab"
 url: "https://github.com/sparkainlp-x/oes-quantum-binaural-lab"
 license: AGPL-3.0-only
-version: "0.1.0"
-date-released: "2026-10-05"
+version: "0.1.1"
+date-released: "2026-10-08"
 doi: "10.5281/zenodo.23175494"
 identifiers:
   - type: doi
@@ -27,8 +27,7 @@ abstract: >-
   correlation with synthetic readout error; no quantum state or circuit
   evolution), and digital stereo loopback (in-memory multitone calibration; no
   audio hardware). SYNTHETIC evidence only. Membrane is a metaphor; observer
-  means readout, not consciousness. No quantum advantage, QEC, or hardware
-  claim.
+  means measurement readout. No quantum hardware is used.
 keywords:
   - classical-simulation
   - synthetic

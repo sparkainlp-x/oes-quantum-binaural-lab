@@ -5,4 +5,4 @@ through the timestamped classical event bus in :mod:`app`. Not quantum hardware,
 not QEC, and not a consciousness model.
 """
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"

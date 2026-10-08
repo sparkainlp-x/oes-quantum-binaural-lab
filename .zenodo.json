@@ -1,8 +1,9 @@
 {
   "upload_type": "software",
   "title": "oes-quantum-binaural-lab: classical toy simulation of Bell-correlation Monte Carlo, scalar metrics ledger, and digital stereo loopback",
-  "version": "0.1.0",
-  "description": "<p><strong>oes-quantum-binaural-lab</strong> is an offline, dependency-free Python prototype with three deliberately separate classical software lanes: a <em>classical metrics ledger</em> (1,024 scalar slots, not an OES detector), a <em>Bell-correlation Monte Carlo model</em> (stipulated cosine correlation with synthetic readout error; no quantum state or circuit evolution), and <em>digital stereo loopback</em> (in-memory multitone calibration; no audio hardware).</p><p><strong>Evidence.</strong> All outputs are SYNTHETIC and seed-controlled. Bundled default-run reports use seed 1731. CHSH is an approximate simulator check only.</p><p><strong>Limits.</strong> Classical toy simulation: membrane is metaphor; observer means readout not consciousness; no quantum hardware, QEC, quantum advantage, or analog audio calibration.</p>",
+  "version": "0.1.1",
+  "publication_date": "2026-10-08",
+  "description": "<p><strong>oes-quantum-binaural-lab</strong> is an offline, dependency-free Python prototype with three deliberately separate classical software lanes: a <em>classical metrics ledger</em> (1,024 scalar slots, not an OES detector), a <em>Bell-correlation Monte Carlo model</em> (stipulated cosine correlation with synthetic readout error; no quantum state or circuit evolution), and <em>digital stereo loopback</em> (in-memory multitone calibration; no audio hardware).</p><p><strong>Evidence.</strong> All outputs are SYNTHETIC and seed-controlled. Bundled default-run reports use seed 1731. CHSH is an approximate simulator check only.</p><p><strong>Limits.</strong> Classical toy simulation on an ordinary computer: &ldquo;membrane&rdquo; is a metaphor and &ldquo;observer&rdquo; means measurement readout. No quantum hardware or analog audio calibration is involved.</p>",
   "creators": [
     {
       "name": "Brisson, Jean-François",
@@ -42,6 +43,5 @@
       "identifier": "spark-ai-nlp"
     }
   ],
-  "notes": "Evidence status: SYNTHETIC classical toy simulation. Not quantum hardware, QEC, or consciousness. Commercial licensing: see COMMERCIAL-LICENSE.md.",
-  "publication_date": "2026-10-05"
+  "notes": "Evidence status: SYNTHETIC classical toy simulation; no quantum hardware is used. Commercial licensing: see COMMERCIAL-LICENSE.md."
 }

@@ -6,7 +6,7 @@
 [![Evidence: SYNTHETIC](https://img.shields.io/badge/evidence-SYNTHETIC-blue.svg)](#scope-and-limitations)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23175494.svg)](https://doi.org/10.5281/zenodo.23175494)
 
-Local, dependency-free Python prototype with **three deliberately separate classical software lanes**. The lanes share only timestamped, scalar classical events. “Membrane” is a metaphor; the audio signal is not entangled with qubits. This is a **classical toy simulation** — not quantum hardware, not QEC, and not a consciousness model.
+Local, dependency-free Python prototype with **three deliberately separate classical software lanes**. The lanes share only timestamped, scalar classical events. “Membrane” is a metaphor; the audio signal is not entangled with qubits. This is a **classical toy simulation** that runs on an ordinary computer; no quantum hardware is involved.
 
 | Lane | Accurate name | What it is **not** |
 |---|---|---|
@@ -58,7 +58,7 @@ The three implementation lanes (`quantum.py`, `audio.py`, `control.py`) do not i
 
 The default structured model is **512 independent pairwise samplers (1,024 named qubits total)**. It is not one globally entangled 1,024-qubit state. Each pair is sampled using a four-outcome probability distribution from a stipulated cosine correlation law with synthetic readout error; the implementation never constructs a dense state vector of size `2^1024`, and it does **not** prepare or evolve a quantum state or circuit. Classical Monte Carlo only.
 
-Superposition tooling includes repeated Z-basis measurements of `|+> = (|0> + |1>)/sqrt(2)` (a balanced-outcome sampler) plus an **H-then-Z control**: ideal `|+>` yields P(1)=0 after H, while an incoherent 50/50 mixture stays ~50/50. The observer is measurement/readout in the model, not consciousness.
+Superposition tooling includes repeated Z-basis measurements of `|+> = (|0> + |1>)/sqrt(2)` (a balanced-outcome sampler) plus an **H-then-Z control**: ideal `|+>` yields P(1)=0 after H, while an incoherent 50/50 mixture stays ~50/50. The observer is the measurement readout in the model.
 
 ### Pair-local readout assignment matrices
 
@@ -92,7 +92,7 @@ This is **digital stereo loopback**, not an analog measurement. It does not open
 
 - Classical toy simulation / SYNTHETIC evidence only.
 - “Membrane” is metaphorical; no biological membrane is represented.
-- “Observer” means measurement/readout; no consciousness detection is modeled.
+- “Observer” means measurement readout only.
 - No quantum hardware, no quantum state/circuit evolution, no QEC, no quantum advantage.
 - Pair-local 4×4 readout crosstalk is simulated; cross-pair correlated readout is not.
 - CHSH is an approximate simulator check, not a loophole-free Bell test or hardware evidence.
