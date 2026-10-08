@@ -18,8 +18,8 @@ identifiers:
     value: "10.5281/zenodo.23175494"
     description: "Concept DOI (all versions)"
   - type: doi
-    value: "10.5281/zenodo.23175495"
-    description: "Version DOI for v0.1.0"
+    value: "10.5281/zenodo.23241553"
+    description: "Version DOI for v0.1.1"
 abstract: >-
   Offline, dependency-free Python prototype with three deliberately separate
   classical software lanes: a classical metrics ledger (1,024 scalar slots, not
