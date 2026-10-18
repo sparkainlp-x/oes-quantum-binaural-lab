@@ -105,4 +105,6 @@ See [`CITATION.cff`](CITATION.cff). The current version is 0.1.1 (tag [`v0.1.1`]
 
 ## License
 
+Copyright (c) 2026 Jean-François Brisson, Spark AI NLP.
+
 AGPL-3.0-only. Commercial licensing: [`COMMERCIAL-LICENSE.md`](COMMERCIAL-LICENSE.md).
